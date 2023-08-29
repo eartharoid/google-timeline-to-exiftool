@@ -1,0 +1,21 @@
+{
+  "name": "google-timeline-to-exiftool",
+  "version": "1.0.0",
+  "description": "A script to convert your Google Timeline data to an ExifTool-compatible format, for geotagging photos. ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "./index.js",
+  "keywords": [],
+  "author": "eartharoid",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "progress": "^2.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.48.0"
+  }
+}

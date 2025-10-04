@@ -1,4 +1,5 @@
 # google-timeline-to-exiftool
-A script to convert your Google Maps Timeline data (exported from Google Takeout) to an ExifTool-compatible format.
+
+A tiny, fast, zero-dependency script to convert your Google Maps Timeline location data to an [ExifTool](https://exiftool.org/)-compatible CSV format of timestamps and GPS coordinates.
 
 Read more at <https://eartharoid.me/blog/using-google-timeline-for-my-photos/>.

@@ -1,3 +1,2 @@
-node_modules
-history.csv
-test
+*.csv
+*.json

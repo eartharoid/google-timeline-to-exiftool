@@ -8,7 +8,7 @@ const filename = `locations-up-to-${now.toISOString().slice(0, 10)}.csv`;
 console.log(`Creating`, filename);
 const stream = createWriteStream(filename);
 // ? https://www.exiftool.org/geotag.html#CSVFormat
-stream.write('GPSAltitude,GPSDateTime,GPSLatitude,GPSLongitude,GPSSpeed (m/s)');
+stream.write('GPSDateTime,GPSAltitude,GPSLatitude,GPSLongitude,GPSSpeed (m/s)');
 
 const input = process.argv[2] || './Timeline.json';
 console.log('Reading', input);
@@ -23,8 +23,8 @@ for (const signal of timeline.rawSignals) {
 		const [lat, lng] = position.LatLng.replace(/°/g, '').split(', ');
 		stream.write(
 			'\n'
-			+ (position.altitudeMeters ?? '') + ','
 			+ position.timestamp.replace(/-/g, ':').replace('T', ' ') + ','
+			+ (position.altitudeMeters ?? '') + ','
 			+ lat + ','
 			+ lng + ','
 			+ (position.speedMetersPerSecond ?? '')
